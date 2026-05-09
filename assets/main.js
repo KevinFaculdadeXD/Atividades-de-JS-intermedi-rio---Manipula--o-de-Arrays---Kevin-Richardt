@@ -1,3 +1,22 @@
+const input = document.getElementById("input")
+const add_final = document.querySelector("#add-fina l")
+
+function renderizarEmQuatroKa(){
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderizarEmQuatroKa()
+    })
+
+add_final.addEventListener("click", () => {
+    let valor_input = input.value
+
+    lista_tela.innerHTML = 
+
+    lista_nomes.push(valor_input)
+    console.log(lista_nomes)
+    renderizarEmQuatroKa()
+})
+}
 let lista_nomes = ["Forza", "Horizon", "Six"]
 
 function renderizarEmQuatroKa(){
