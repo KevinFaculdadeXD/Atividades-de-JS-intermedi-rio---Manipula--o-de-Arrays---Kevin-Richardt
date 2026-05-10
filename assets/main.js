@@ -4,6 +4,8 @@ const remove_final = document.querySelector("#remove-final")
 const remove_first = document.querySelector("#remove-first")
 const add_start = document.querySelector("#add-start")
 const lista_telinhaUwU = document.querySelector("#lista_telinhaUwU")
+const btn_filtrarNomesGrandesDaDesgraca = document.querySelector("#filtrarNomesGrandesDaDesgraca")
+const btn_maiusculoFicarComRaivaGrr  = document.querySelector("#maiusculoFicarComRaivaGrr")
 
 let lista_nomes = ["Forza", "Horizon", "Six"]
 // atividade 1
@@ -40,6 +42,19 @@ function mostrarMaiusculos() {
 
 }
 mostrarMaiusculos()
+// atividade 5
+btn_filtrarNomesGrandesDaDesgraca.addEventListener("click", () => {
+    lista_telinhaUwU.innerHTML = ""
+    let nomesFiltrados = lista_nomes.filter(nome => nome.toUpperCase())
+    nomesFiltrados.forEach(nome => {
+        let item = document.createElement("li")
+        item.innerText = nome
+        lista_telinhaUwU.appendChild(item)
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    renderizarEmQuatroKa()
+})
 // atividade 2
 
 add_final.addEventListener("click", () => {
@@ -86,7 +101,4 @@ add_start.addEventListener("click", () => {
 
         input.value = ""
     }
-})
-document.addEventListener("DOMContentLoaded", () => {
-    renderizarEmQuatroKa()
 })
