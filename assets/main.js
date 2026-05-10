@@ -20,19 +20,26 @@ function renderizarEmQuatroKa() {
 //atividade 3
 
 function nomesGrandesDemaisSlk() {
-    let nomesGrandesDemaisSlk = 0
+
+    let contador = 0
 
     lista_nomes.forEach(nome => {
-        if (nome.length > 5){
-            nomesGrandesDemaisSlk++
+        if (nome.length > 5) {
+            contador++
         }
     })
-
-    nomesGrandesDemaisSlk.innerText = 
-        "Quantidade de palavras com mais de 5 letras: "
-        + nomesGrandesDemaisSlk
+    console.log("Quantidade de palavras com mais de 5 letras:", contador)
 }
+nomesGrandesDemaisSlk()
+// atividade 4
+function mostrarMaiusculos() {
 
+    lista_nomes.forEach(function(nome) {
+        console.log(nome.toUpperCase())
+    })
+
+}
+mostrarMaiusculos()
 // atividade 2
 
 add_final.addEventListener("click", () => {
